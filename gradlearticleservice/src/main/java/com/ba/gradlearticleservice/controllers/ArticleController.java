@@ -22,11 +22,6 @@ public class ArticleController {
     @Resource
     MongoTemplate mongoTemplate;
 
-    @GetMapping("/test")
-    public String test(){
-        return "test";
-    }
-
     @GetMapping
     public List<Article> getArticles(){
         return mongoTemplate.findAll(Article.class);
